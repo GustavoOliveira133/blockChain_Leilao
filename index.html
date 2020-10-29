@@ -191,7 +191,7 @@
 		};
     
     	async function getAndShowVendedor () {
-			console.log('v4');
+			console.log('v5');
 		  var val = window.LeilaoCegas.methods.Vendedor().call();
 			document.getElementById("Vendedor").value = await val;
 		};
@@ -207,7 +207,8 @@
 	
 	async function Apostar () {
 		var msg = parseFloat(document.getElementById("aposta").value);
-		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, value: msg});
+		//window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, value: msg});
+		let send = web3.eth.sendTransaction({from:eth.coinbase,to:contract_address, value:web3.toWei(msg, "wei")});
 		
 	}
 
