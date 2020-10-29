@@ -206,7 +206,7 @@
 		
 	
 	async function Apostar () {
-		var msg = 1000000000000000000 * Int(document.getElementById("aposta").value);
+		var msg = 1000000000000000000 * parseInt(document.getElementById("aposta").value);
 		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, to: contract_address, value: msg});
 		//let send = web3.eth.sendTransaction({from:eth.coinbase,to:contract_address, value:web3.toWei(msg, "wei")});
 		
