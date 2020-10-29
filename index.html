@@ -173,20 +173,20 @@
 		};
 
 		async function getAndShowDataFinalLeilao () {
-		  var val = window.LeilaoCegas.methods.DataFinalDoLeilao;
+		  var val = window.LeilaoCegas.methods.DataFinalDoLeilao().call();
 			document.getElementById("DataFinal").value = await val;
 		};
     	async function getAndShowMaiorAposta () {
-		  var val = window.LeilaoCegas.methods.MaiorAposta;
+		  var val = window.LeilaoCegas.methods.MaiorAposta().call();
 			document.getElementById("MaiorAposta").value = await val;
 		};
     	async function getAndShowMaiorApostador () {
-		  var val = window.LeilaoCegas.methods.DataFinalDoLeilao;
+		  var val = window.LeilaoCegas.methods.MaiorApostador().call();
 			document.getElementById("MaiorApostador").value = await val;
 		};
 		
 	async function getAndShowPrecoMinimo () {
-		  var val = window.LeilaoCegas.methods.PrecoMinimo.call();
+		  var val = window.LeilaoCegas.methods.PrecoMinimo().call();
 			document.getElementById("PrecoMinimo").value = await val;
 		};
     
