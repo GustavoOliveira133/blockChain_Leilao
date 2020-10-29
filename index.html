@@ -186,12 +186,12 @@
 		};
 		
 	async function getAndShowPrecoMinimo () {
-		  var val = window.LeilaoCegas.methods.PrecoMinimo;
+		  var val = window.LeilaoCegas.methods.PrecoMinimo.call();
 			document.getElementById("PrecoMinimo").value = await val;
 		};
     
     	async function getAndShowVendedor () {
-		  var val = window.LeilaoCegas.methods.Vendedor;
+		  var val = window.LeilaoCegas.methods.Vendedor().call();
 			document.getElementById("Vendedor").value = await val;
 		};
 
@@ -205,8 +205,8 @@
 		
 	
 	async function Apostar () {
-		var msg.value = document.getElementById("aposta").value;
-		window.SimpleStorage.methods.Apostar().send(msg.value, {from:window.coinbase});
+		var msg = document.getElementById("aposta").value;
+		window.LeilaoCegas.methods.Apostar().send(msg, {from:window.coinbase});
 	}
 
 
