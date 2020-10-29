@@ -205,8 +205,8 @@
 		
 	
 	async function Apostar () {
-		var msg.value = document.getElementById("aposta").value;
-		window.SimpleStorage.methods.Apostar().send(msg.value, {from:window.coinbase});
+		var msgvalue = document.getElementById("aposta").value;
+		window.SimpleStorage.methods.Apostar().send(msgvalue, {from:window.coinbase});
 	}
 
 
