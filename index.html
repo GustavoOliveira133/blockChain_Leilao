@@ -4,7 +4,7 @@
 	<title>Leilao</title>
 	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
 	<script type="text/javascript">
-		const contract_address = "0xf29AA23Ca60363a824cC43Cef26eA3b52960E98e";
+		const contract_address = "0x3eca5fadc7f48bdae16c9aaf048a935d1b9f37ac";
 		
 		const contract_abi = [
 	{
@@ -205,8 +205,8 @@
 		
 	
 	async function Apostar () {
-		var msgvalue = document.getElementById("aposta").value;
-		window.SimpleStorage.methods.Apostar().send(msgvalue, {from:window.coinbase});
+		var msg.value = document.getElementById("aposta").value;
+		window.SimpleStorage.methods.Apostar().send(msg.value, {from:window.coinbase});
 	}
 
 
