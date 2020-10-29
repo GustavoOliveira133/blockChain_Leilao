@@ -191,7 +191,7 @@
 		};
     
     	async function getAndShowVendedor () {
-			console.log('v1');
+			console.log('v2');
 		  var val = window.LeilaoCegas.methods.Vendedor().call();
 			document.getElementById("Vendedor").value = await val;
 		};
@@ -207,7 +207,7 @@
 	
 	async function Apostar () {
 		var msg = document.getElementById("aposta").value;
-		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, 'value': msg});
+		window.LeilaoCegas.methods.Apostar({from:window.coinbase, value: msg}).call().;
 		
 	}
 
