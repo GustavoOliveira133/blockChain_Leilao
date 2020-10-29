@@ -185,12 +185,12 @@
 			document.getElementById("MaiorApostador").value = await val;
 		};
 		
-		async function getAndShowPrecoMinimo () {
+	async function getAndShowPrecoMinimo () {
 		  var val = window.LeilaoCegas.methods.PrecoMinimo;
 			document.getElementById("PrecoMinimo").value = await val;
 		};
     
-    async function getAndShowVendedor () {
+    	async function getAndShowVendedor () {
 		  var val = window.LeilaoCegas.methods.Vendedor;
 			document.getElementById("Vendedor").value = await val;
 		};
@@ -219,24 +219,17 @@
 	<button id="getme3" onclick="getAndShowMaiorApostador()">Ver</button>
 	
   <br><br>
-  
-	Falta para alcançar a Meta em Whei: <input type="text" name="faltaParaFim" id="faltaParaFim" readonly>
-	<button id="getme4" onclick="getAndShowFaltaFim()">Ver</button>
+	
+ Preco minimo de Aposta: <input type="text" name="PrecoMinimo" id="PrecoMinimo" readonly>
+	<button id="getme4" onclick="getAndShowPrecoMinimo()">Ver</button>
 	
   <br><br>
   
-  Falta para alcançar a Meta em Whei: <input type="text" name="Vendedor" id="Vendedor" readonly>
-	<button id="getme4" onclick="getAndShowVendedor()">Ver</button>
+ Endereco do Vendedor: <input type="text" name="Vendedor" id="Vendedor" readonly>
+	<button id="getme5" onclick="getAndShowVendedor()">Ver</button>
 	
   <br><br>
   
-	<p>Endereço para fazer a sua doação via MetaMask:</p>
-	<h1>0x5cce31f9a947878a904b44dcfcc7feac89ee262b</h1>
-	
-  <br><br>
-  
-	<p>Obs: Caso o MetaMask exiba uma falha ao interagir com o contrato, provavelmente já alcançamos a meta para essa Vakinha e as cripto moedas foram enviadas ao dono do contrato!</p>
-	<p>Nesse caso você deve verificar se faltam 0 Whei para alcançarmos a meta! Obrigado pelo interesse em participar.</p>
 
   </body>
 </html>
