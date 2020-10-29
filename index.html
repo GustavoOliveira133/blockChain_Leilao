@@ -206,7 +206,8 @@
 	
 	async function Apostar () {
 		var msg = document.getElementById("aposta").value;
-		window.LeilaoCegas.methods.Apostar().send(msg, {from:window.coinbase});
+		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, value: msg});
+		
 	}
 
 
