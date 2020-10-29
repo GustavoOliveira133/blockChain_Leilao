@@ -202,6 +202,13 @@
 			window.CryptoVakinha = new web3.eth.Contract(contract_abi, contract_address);
 			saveCoinbase();
 		}
+		
+	
+	async function setVal () {
+		var msg.value = document.getElementById("aposta").value;
+		window.SimpleStorage.methods.Apostar().send(msg.value, {from:window.coinbase});
+	}
+
 
 	</script>
 </head>
@@ -229,6 +236,9 @@
 	<button id="getme5" onclick="getAndShowVendedor()">Ver</button>
 	
   <br><br>
+	
+	Apostar: <input type="int" name="aposta" id="aposta">
+	<button id="setme" onclick="Apostar()">Fazer Aposta</button>
   
 
   </body>
