@@ -10,9 +10,23 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
 	<script type="text/javascript">
-		const contract_address = "0x3eca5fadc7f48bdae16c9aaf048a935d1b9f37ac";
+		const contract_address = "0x899c1ede78b722987f8d60daa04b9f8b9a6fd3e3";
 		
 		const contract_abi = [
+	{
+		"inputs": [],
+		"name": "AcabouOTempoDoLeilao",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "Apostar",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
 	{
 		"inputs": [
 			{
@@ -79,29 +93,9 @@
 	},
 	{
 		"inputs": [],
-		"name": "AcabouOTempoDoLeilao",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "Apostar",
+		"name": "TesteSuaSorte",
 		"outputs": [],
 		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "DataFinalDoLeilao",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -141,13 +135,6 @@
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "TesteSuaSorte",
-		"outputs": [],
-		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -216,6 +203,12 @@
 		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, to: contract_address, value: msg});
 		
 	}
+		
+	async function TesteSuaSorte () {
+		var msg = parseInt(document.getElementById("aposta").value);
+		window.LeilaoCegas.methods.TesteSuaSorte().send({from:window.coinbase, to: contract_address, value: msg});
+		
+	}	
 	</script>		
 </head>
 
