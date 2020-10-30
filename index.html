@@ -214,17 +214,16 @@
 	async function Apostar () {
 		var msg = parseInt(document.getElementById("aposta").value);
 		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, to: contract_address, value: msg});
-		//let send = web3.eth.sendTransaction({from:eth.coinbase,to:contract_address, value:web3.toWei(msg, "wei")});
 		
 	}
-
-
-	</script>
+	</script>		
 </head>
+
+
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="#">Navbar</a>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: min-content + 70px;">
+			<a class="navbar-brand" href="#" style="font-size: xx-large; font-family: Lobster, serif;" >Leilão Online </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
@@ -251,38 +250,163 @@
 			</div>
 		  </nav>
 	</header>
-	<br><br>
-	<img src="assets/carro1.jpg" class="rounded mx-auto d-block" alt="...">
-	
-  <br><br>
-  <div class="container">
-	Data Final do Leilão: <input type="text" name="DataFinal" id="DataFinal"  readonly>
-	<button id="getme1" onclick="getAndShowDataFinalLeilao()">Ver</button>
-	
-  <br><br>
-  
-  Maior Aposta até agora: <input type="text" name="MaiorAposta" id="MaiorAposta" readonly>
-	<button id="getme2" onclick="getAndShowMaiorAposta()">Ver</button>
-	
-  <br><br>
-  Data Final do Leilão: <input type="text" name="MaiorApostador" id="MaiorApostador" readonly>
-	<button id="getme3" onclick="getAndShowMaiorApostador()">Ver</button>
-	
-  <br><br>
-	
- Preco minimo de Aposta: <input type="text" name="PrecoMinimo" id="PrecoMinimo" readonly>
-	<button id="getme4" onclick="getAndShowPrecoMinimo()">Ver</button>
-	
-  <br><br>
-  
- Endereco do Vendedor: <input type="text" name="Vendedor" id="Vendedor" readonly>
-	<button id="getme5" onclick="getAndShowVendedor()">Ver</button>
-	
-  <br><br>
-	
-	Apostar: <input type="text" name="aposta" id="aposta">
-	<button id="setme" onclick="Apostar()">Fazer Aposta</button>
-  </div>
 
+	<div class="row" style="background-color: rgb(233, 227, 227);">
+		<br><br>
+			
+
+		<div class="container" style="background-color:white; margin-top: 30px;">
+			<h1 style="font-family: Comic Sans MS, cursive, sans-serif;">Ford Ka</h1>			
+			<img src="assets/carro11.jpg" class="rounded mx-auto d-block" >	
+
+
+			<div class="card" style="margin-top: 30px; margin-bottom: 30px;">
+				<div class="card-header">
+					Informações Gerais do Carro - <b>FORD KA</b>
+				</div>
+				<div class="card-body">
+				  <blockquote class="blockquote mb-0">
+					<p>	<b>Dimensões:</b> 3.941-4.275 mm C x 1.695 mm L x 1.525-1.564 mm A <br>
+						<b>Volume de carga:</b> 257 - 445 litros <br>
+						<b>Tanque de combustível:</b> 51 - 52 litros <br>
+						<b>Kilometragem:</b>  30.500 km/rodados <br>
+						<b>Motor:</b>1,0 l 3 cilindros em linha, 1,5 l 3 cilindros em linha</p>
+					<footer class="blockquote-footer">Informações gerais do Ford KA <cite title="Source Title">Retirado da Internet - https://www.google.com/search?q=ford+ka&rlz=1C1GCEA_enBR880BR880&oq=ford+ka&aqs=chrome.0.69i59l2j0i433l6.1426j0j15&sourceid=chrome&ie=UTF-8</cite></footer>
+				  </blockquote>
+				</div>
+			  </div>
+
+
+			<table class="table table-borderless">
+				<tbody>
+					<tr style="border-bottom: 1px solid #ccc;">
+						<td></td>
+						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data Final do Leilão:</h5></label></td>
+						<td><input type="text" name="DataFinal" id="DataFinal"  readonly></td>
+						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataFinalLeilao()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 1px solid #ccc;" >
+						<td></td>
+						<td><label for="MaiorAposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Aposta até agora:</h5></label></td>
+						<td><input type="text" name="MaiorAposta" id="MaiorAposta" readonly></td>
+						<td><button id="getme2" class="btn btn-outline-info" onclick="getAndShowMaiorAposta()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 1px solid #ccc;" >
+						<td></td>
+						<td><label for="MaiorApostador" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Apostador:</h5></label></td>
+						<td><input type="text" name="MaiorApostador" id="MaiorApostador" readonly></td>
+						<td><button id="getme3" class="btn btn-outline-info" onclick="getAndShowMaiorApostador()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 1px solid #ccc;">
+						<td></td>
+						<td><label for="PrecoMinimo" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Preco minimo de Aposta:</h5></label></td>
+						<td><input type="text" name="PrecoMinimo" id="PrecoMinimo" readonly></td>
+						<td><button id="getme4" class="btn btn-outline-info" onclick="getAndShowPrecoMinimo()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 3px solid #ccc;">
+						<td></td>
+						<td><label for="Vendedor" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Endereco do Vendedor:</h5></label></td>
+						<td><input type="text" name="Vendedor" id="Vendedor" readonly></td>
+						<td> <button id="getme5" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Apostar:</h5></label></td>
+						<td><input type="text" name="aposta" id="aposta"></td>
+						<td><button id="setme" class="btn btn-outline-danger" onclick="Apostar()">Fazer Aposta!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Testar Sua Sorte:</h5></label></td>
+						<td><input type="text" name="teste" id="teste"></td>
+						<td><button id="setme2" class="btn btn-outline-danger" onclick="TesteSuaSorte()">Boa Sorte</button></td>
+						<td colspan="8"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="container" style="background-color:white; margin-top: 30px;">
+			<h1 style="font-family: Comic Sans MS, cursive, sans-serif;">HB 20</h1>			
+			<img src="assets/carro12.jpg" class="rounded mx-auto d-block" >	
+
+
+			<div class="card" style="margin-top: 30px; margin-bottom: 30px;">
+				<div class="card-header">
+					Informações Gerais do Carro - <b>HB 20</b>
+				</div>
+				<div class="card-body">
+				  <blockquote class="blockquote mb-0">
+					<p>	<b>Dimensões:</b> 3.941-4.275 mm C x 1.695 mm L x 1.525-1.564 mm A  <br>
+						<b>Volume de carga:</b>  257 - 445 litros <br>
+						<b>Tanque de combustível:</b>  51 - 52 litros <br>
+						<b>Kilometragem:</b>  100.000 km/rodados <br>
+						<b>Motor:</b>1,0 l 3 cilindros em linha, 1,5 l 3 cilindros em linha</p>
+					<footer class="blockquote-footer">Informações gerais do HB 20 <cite title="Source Title">Retirado da Internet - https://www.google.com/search?q=ford+ka&rlz=1C1GCEA_enBR880BR880&oq=ford+ka&aqs=chrome.0.69i59j0i433j0j0i433j0j46i433j0j0i433.1895j0j7&sourceid=chrome&ie=UTF-8</cite></footer>
+				  </blockquote>
+				</div>
+			  </div>
+
+
+			<table class="table table-borderless">
+				<tbody>
+					<tr style="border-bottom: 1px solid #ccc;">
+						<td></td>
+						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data Final do Leilão:</h5></label></td>
+						<td><input type="text" name="DataFinal" id="DataFinal"  readonly></td>
+						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataFinalLeilao()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 1px solid #ccc;" >
+						<td></td>
+						<td><label for="MaiorAposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Aposta até agora:</h5></label></td>
+						<td><input type="text" name="MaiorAposta" id="MaiorAposta" readonly></td>
+						<td><button id="getme2" class="btn btn-outline-info" onclick="getAndShowMaiorAposta()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 1px solid #ccc;" >
+						<td></td>
+						<td><label for="MaiorApostador" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Apostador:</h5></label></td>
+						<td><input type="text" name="MaiorApostador" id="MaiorApostador" readonly></td>
+						<td><button id="getme3" class="btn btn-outline-info" onclick="getAndShowMaiorApostador()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 1px solid #ccc;">
+						<td></td>
+						<td><label for="PrecoMinimo" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Preco minimo de Aposta:</h5></label></td>
+						<td><input type="text" name="PrecoMinimo" id="PrecoMinimo" readonly></td>
+						<td><button id="getme4" class="btn btn-outline-info" onclick="getAndShowPrecoMinimo()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr style="border-bottom: 3px solid #ccc;">
+						<td></td>
+						<td><label for="Vendedor" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Endereco do Vendedor:</h5></label></td>
+						<td><input type="text" name="Vendedor" id="Vendedor" readonly></td>
+						<td> <button id="getme5" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Valor!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Apostar:</h5></label></td>
+						<td><input type="text" name="aposta" id="aposta"></td>
+						<td><button id="setme" class="btn btn-outline-danger" onclick="Apostar()">Fazer Aposta!</button></td>
+						<td colspan="8"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Testar Sua Sorte:</h5></label></td>
+						<td><input type="text" name="teste" id="teste"></td>
+						<td><button id="setme2" class="btn btn-outline-danger" onclick="TesteSuaSorte()">Boa Sorte!</button></td>
+						<td colspan="8"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
   </body>
 </html>

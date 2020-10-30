@@ -1,0 +1,12 @@
+.tablevertical { border-collapse: collapse; }
+.tablevertical tr { border: none; }
+.linha { color: rgb(139, 19, 19);
+  border-right: solid 1px #f00; 
+  border-left: solid 1px #f00;
+}
+
+#borderimg2 {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(borda.png) 20% round;
+  }
