@@ -165,8 +165,8 @@
 		  window.coinbase = await window.web3.eth.getCoinbase();
 		};
 
-		async function getAndShowDataFinalLeilao () {
-		  var val = window.Leilao.methods.DataFinalDoLeilao().call();
+		async function getAndShowDataInicioLeilao () {
+		  var val = window.Leilao.methods.DataInicioDoLeilao().call();
 			document.getElementById("DataFinal").value = await val;
 		};
     	async function getAndShowMaiorAposta () {
@@ -204,11 +204,6 @@
 		
 	}
 		
-	async function TesteSuaSorte () {
-		var msg = parseInt(document.getElementById("aposta").value);
-		window.Leilao.methods.TesteSuaSorte().send({from:window.coinbase, to: contract_address, value: msg});
-		
-	}	
 	</script>		
 </head>
 
@@ -276,7 +271,7 @@
 						<td></td>
 						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data Final do Leilão:</h5></label></td>
 						<td><input type="text" name="DataFinal" id="DataFinal"  readonly></td>
-						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataFinalLeilao()">Visualizar o Valor!</button></td>
+						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataInicioLeilao()">Visualizar o Valor!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;" >
