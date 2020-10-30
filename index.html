@@ -257,23 +257,23 @@
 				<tbody>
 					<tr style="border-bottom: 1px solid #ccc;">
 						<td></td>
-						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data Final do Leilão:</h5></label></td>
+						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data de Inicio do Leilão:</h5></label></td>
 						<td><input type="text" name="DataFinal" id="DataFinal"  readonly></td>
-						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataInicioLeilao()">Visualizar o Valor!</button></td>
+						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataInicioLeilao()">Visualizar a Data!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;" >
 						<td></td>
 						<td><label for="MaiorAposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Aposta até agora:</h5></label></td>
 						<td><input type="text" name="MaiorAposta" id="MaiorAposta" readonly></td>
-						<td><button id="getme2" class="btn btn-outline-info" onclick="getAndShowMaiorAposta()">Visualizar o Valor!</button></td>
+						<td><button id="getme2" class="btn btn-outline-info" onclick="getAndShowMaiorAposta()">Visualizar a Aposta!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;" >
 						<td></td>
 						<td><label for="MaiorApostador" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Apostador:</h5></label></td>
 						<td><input type="text" name="MaiorApostador" id="MaiorApostador" readonly></td>
-						<td><button id="getme3" class="btn btn-outline-info" onclick="getAndShowMaiorApostador()">Visualizar o Valor!</button></td>
+						<td><button id="getme3" class="btn btn-outline-info" onclick="getAndShowMaiorApostador()">Visualizar o Apostador!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;">
@@ -287,7 +287,7 @@
 						<td></td>
 						<td><label for="Vendedor" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Endereco do Vendedor:</h5></label></td>
 						<td><input type="text" name="Vendedor" id="Vendedor" readonly></td>
-						<td> <button id="getme5" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Valor!</button></td>
+						<td> <button id="getme5" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Vendedor!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr>
@@ -295,13 +295,6 @@
 						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Apostar:</h5></label></td>
 						<td><input type="text" name="aposta" id="aposta"></td>
 						<td><button id="setme" class="btn btn-outline-danger" onclick="Apostar()">Fazer Aposta!</button></td>
-						<td colspan="8"></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Testar Sua Sorte:</h5></label></td>
-						<td><input type="text" name="teste" id="teste"></td>
-						<td><button id="setme2" class="btn btn-outline-danger" onclick="TesteSuaSorte()">Boa Sorte</button></td>
 						<td colspan="8"></td>
 					</tr>
 				</tbody>
@@ -334,23 +327,23 @@
 				<tbody>
 					<tr style="border-bottom: 1px solid #ccc;">
 						<td></td>
-						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data Final do Leilão:</h5></label></td>
+						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data de Inicio do Leilão:</h5></label></td>
 						<td><input type="text" name="DataFinal" id="DataFinal"  readonly></td>
-						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataFinalLeilao()">Visualizar o Valor!</button></td>
+						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataInicioLeilao()">Visualizar a Data!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;" >
 						<td></td>
 						<td><label for="MaiorAposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Aposta até agora:</h5></label></td>
 						<td><input type="text" name="MaiorAposta" id="MaiorAposta" readonly></td>
-						<td><button id="getme2" class="btn btn-outline-info" onclick="getAndShowMaiorAposta()">Visualizar o Valor!</button></td>
+						<td><button id="getme2" class="btn btn-outline-info" onclick="getAndShowMaiorAposta()">Visualizar a Aposta!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;" >
 						<td></td>
 						<td><label for="MaiorApostador" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Maior Apostador:</h5></label></td>
 						<td><input type="text" name="MaiorApostador" id="MaiorApostador" readonly></td>
-						<td><button id="getme3" class="btn btn-outline-info" onclick="getAndShowMaiorApostador()">Visualizar o Valor!</button></td>
+						<td><button id="getme3" class="btn btn-outline-info" onclick="getAndShowMaiorApostador()">Visualizar o Apostador!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 1px solid #ccc;">
@@ -364,7 +357,7 @@
 						<td></td>
 						<td><label for="Vendedor" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Endereco do Vendedor:</h5></label></td>
 						<td><input type="text" name="Vendedor" id="Vendedor" readonly></td>
-						<td> <button id="getme5" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Valor!</button></td>
+						<td> <button id="getme5" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Vendedor!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr>
@@ -372,13 +365,6 @@
 						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Apostar:</h5></label></td>
 						<td><input type="text" name="aposta" id="aposta"></td>
 						<td><button id="setme" class="btn btn-outline-danger" onclick="Apostar()">Fazer Aposta!</button></td>
-						<td colspan="8"></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><label for="aposta" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Testar Sua Sorte:</h5></label></td>
-						<td><input type="text" name="teste" id="teste"></td>
-						<td><button id="setme2" class="btn btn-outline-danger" onclick="TesteSuaSorte()">Boa Sorte!</button></td>
 						<td colspan="8"></td>
 					</tr>
 				</tbody>
