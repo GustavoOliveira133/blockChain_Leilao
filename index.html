@@ -165,7 +165,10 @@
 		async function saveCoinbase () {
 		  window.coinbase = await window.web3.eth.getCoinbase();
 		};
-
+	async function getAndShowPrecoMinimo1 () {
+		  var val = window.Leilao.methods.PrecoMinimo().call();
+			document.getElementById("PrecoMinimo1").value = await val;
+		};
 	async function getAndShowDataInicioLeilao () {
 		  var val = window.Leilao.methods.DataInicioDoLeilao().call();
 			document.getElementById("DataInicio").value = await val;
@@ -188,6 +191,20 @@
 			console.log('v8');
 		  var val = window.Leilao.methods.Vendedor().call();
 			document.getElementById("Vendedor").value = await val;
+		};
+
+		if (!ethEnabled()) {
+		  alert("Metamask or browser with Ethereum not detected!");
+		}
+		else {
+			window.Leilao = new web3.eth.Contract(contract_abi, contract_address);
+			saveCoinbase();
+		}
+		
+		async function getAndShowVendedor2 () {
+			console.log('v8');
+		  var val = window.Leilao.methods.Vendedor().call();
+			document.getElementById("Vendedor2").value = await val;
 		};
 
 		if (!ethEnabled()) {
@@ -363,7 +380,7 @@
 						<td></td>
 						<td><label for="PrecoMinimo" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Preco minimo de Aposta:</h5></label></td>
 						<td><input type="text" name="PrecoMinimo" id="PrecoMinimo1" readonly></td>
-						<td><button id="getme9" class="btn btn-outline-info" onclick="getAndShowPrecoMinimo()">Visualizar o Valor!</button></td>
+						<td><button id="getme9" class="btn btn-outline-info" onclick="getAndShowPrecoMinimo1()">Visualizar o Valor!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr style="border-bottom: 3px solid #ccc;">
@@ -440,7 +457,7 @@
 						<td></td>
 						<td><label for="Vendedor" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Endereco do Vendedor:</h5></label></td>
 						<td><input type="text" name="Vendedor" id="Vendedor2" readonly></td>
-						<td> <button id="getme15" class="btn btn-outline-info" onclick="getAndShowVendedor()">Visualizar o Vendedor!</button></td>
+						<td> <button id="getme15" class="btn btn-outline-info" onclick="getAndShowVendedor2()">Visualizar o Vendedor!</button></td>
 						<td colspan="8"></td>
 					</tr>
 					<tr>
