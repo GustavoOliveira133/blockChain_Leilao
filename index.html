@@ -166,26 +166,26 @@
 		};
 
 		async function getAndShowDataFinalLeilao () {
-		  var val = window.LeilaoCegas.methods.DataFinalDoLeilao().call();
+		  var val = window.Leilao.methods.DataFinalDoLeilao().call();
 			document.getElementById("DataFinal").value = await val;
 		};
     	async function getAndShowMaiorAposta () {
-		  var val = window.LeilaoCegas.methods.MaiorAposta().call();
+		  var val = window.Leilao.methods.MaiorAposta().call();
 			document.getElementById("MaiorAposta").value = await val;
 		};
     	async function getAndShowMaiorApostador () {
-		  var val = window.LeilaoCegas.methods.MaiorApostador().call();
+		  var val = window.Leilao.methods.MaiorApostador().call();
 			document.getElementById("MaiorApostador").value = await val;
 		};
 		
 	async function getAndShowPrecoMinimo () {
-		  var val = window.LeilaoCegas.methods.PrecoMinimo().call();
+		  var val = window.Leilao.methods.PrecoMinimo().call();
 			document.getElementById("PrecoMinimo").value = await val;
 		};
     
     	async function getAndShowVendedor () {
 			console.log('v8');
-		  var val = window.LeilaoCegas.methods.Vendedor().call();
+		  var val = window.Leilao.methods.Vendedor().call();
 			document.getElementById("Vendedor").value = await val;
 		};
 
@@ -193,20 +193,20 @@
 		  alert("Metamask or browser with Ethereum not detected!");
 		}
 		else {
-			window.LeilaoCegas = new web3.eth.Contract(contract_abi, contract_address);
+			window.Leilao = new web3.eth.Contract(contract_abi, contract_address);
 			saveCoinbase();
 		}
 		
 	
 	async function Apostar () {
 		var msg = parseInt(document.getElementById("aposta").value);
-		window.LeilaoCegas.methods.Apostar().send({from:window.coinbase, to: contract_address, value: msg});
+		window.Leilao.methods.Apostar().send({from:window.coinbase, to: contract_address, value: msg});
 		
 	}
 		
 	async function TesteSuaSorte () {
 		var msg = parseInt(document.getElementById("aposta").value);
-		window.LeilaoCegas.methods.TesteSuaSorte().send({from:window.coinbase, to: contract_address, value: msg});
+		window.Leilao.methods.TesteSuaSorte().send({from:window.coinbase, to: contract_address, value: msg});
 		
 	}	
 	</script>		
