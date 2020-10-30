@@ -168,7 +168,7 @@
 
 		async function getAndShowDataInicioLeilao () {
 		  var val = window.Leilao.methods.DataInicioDoLeilao().call();
-			document.getElementById("DataFinal").value = await val;
+			document.getElementById("DataInicio").value = await val;
 		};
     	async function getAndShowMaiorAposta () {
 		  var val = window.Leilao.methods.MaiorAposta().call();
@@ -270,8 +270,8 @@
 				<tbody>
 					<tr style="border-bottom: 1px solid #ccc;">
 						<td></td>
-						<td><label for="DataFinal" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data de Inicio do Leilão:</h5></label></td>
-						<td><input type="text" name="DataFinal" id="DataFinal"  readonly></td>
+						<td><label for="DataInicio" style="font-family: Comic Sans MS, cursive, sans-serif;"><h5>Data de Inicio do Leilão:</h5></label></td>
+						<td><input type="text" name="DataInicio" id="DataInicio"  readonly></td>
 						<td><button id="getme1" class="btn btn-outline-info" onclick="getAndShowDataInicioLeilao()">Visualizar a Data!</button></td>
 						<td colspan="8"></td>
 					</tr>
