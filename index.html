@@ -10,9 +10,23 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
 	<script type="text/javascript">
-		const contract_address = "0x8b295e912d8e71e9ccbcf2aacc2ca2c42d83f3ef";
+		const contract_address = "0x47aeda705ad7fed5a84ec8acc261f68188e77d16";
 		
 		const contract_abi = [
+	{
+		"inputs": [],
+		"name": "AcabouOTempoDoLeilao",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "Apostar",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
 	{
 		"inputs": [
 			{
@@ -71,20 +85,6 @@
 		],
 		"name": "MaiorApostaMudou",
 		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "AcabouOTempoDoLeilao",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "Apostar",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
 	},
 	{
 		"inputs": [],
