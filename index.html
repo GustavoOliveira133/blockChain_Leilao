@@ -166,7 +166,7 @@
 		  window.coinbase = await window.web3.eth.getCoinbase();
 		};
 
-		async function getAndShowDataInicioLeilao () {
+	async function getAndShowDataInicioLeilao () {
 		  var val = window.Leilao.methods.DataInicioDoLeilao().call();
 			document.getElementById("DataInicio").value = await val;
 		};
